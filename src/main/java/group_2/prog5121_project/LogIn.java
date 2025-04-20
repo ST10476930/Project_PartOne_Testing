@@ -15,13 +15,13 @@ public class LogIn {
  
     private String username;
      private String password;
-     private int cellphone;
+     private int cellPhone;
    
     
 public LogIn(String user, String password, int cell){
     this.username = user;
     this.password = password;
-    this.cellphone = cell;
+    this.cellPhone = cell;
     
     
 }

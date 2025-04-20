@@ -5,6 +5,7 @@
 package group_2.prog5121_project;
 
 import static group_2.prog5121_project.LogIn.phoneChecker;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,12 +27,21 @@ no more than ten characters long in java
             "1234567890",      // not valid
             "+12abc567890",    // not valid
             "+123456"          // Valid 
-        };
+        };//OpenAI.(2025).ChatGPT(April 20 version)[Large language model]
+//https://chatgpt.com/c/6803e649-3e6c-8011-a76f-94745bf34121
 
    for (String number : numbers) {
     System.out.println(number + " → " + (phoneChecker(number) ? "Valid" : "Invalid"));
         }
+   
+   //Prompting user to enter their details
+   String username = JOptionPane.showInputDialog(null, "Please enter your username",
+           "Username", JOptionPane.INFORMATION_MESSAGE);
+   String password = JOptionPane.showInputDialog(null, "Please create strong password",
+          "Password", JOptionPane.INFORMATION_MESSAGE);
+   int cellPhone = Integer.parseInt(JOptionPane.showInputDialog(null,
+           "Please enter your cell number", "CellPhone Number",
+           JOptionPane.INFORMATION_MESSAGE));
+  
     }
 }
-//OpenAI.(2025).ChatGPT(April 20 version)[Large language model]
-//https://chatgpt.com/c/6803e649-3e6c-8011-a76f-94745bf34121

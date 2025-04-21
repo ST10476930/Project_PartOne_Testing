@@ -10,18 +10,18 @@ package group_2.prog5121_project;
  */
 public class LogIn {
      private static final String cell = "^\\+\\d{1,4}\\d{1,10}$";//validates the international code
-     private static final String username1 = "Luc_5";
-    private static final String password1 = "P@12word";
+     //private static final String username1 = "kyl_1";
+    //private static final String password1 = "ch&&sec@ke99!";
  
     private String username;
      private String password;
      private int cellPhone;
    
     
-public LogIn(String user, String password, int cell){
-    this.username = user;
+public LogIn(String username, String password, int cellPhone){
+    this.username = username;
     this.password = password;
-    this.cellPhone = cell;
+    this.cellPhone = cellPhone;
     
     
 }
@@ -58,15 +58,16 @@ no more than ten characters long in java
 return message;
 
 }
-public static boolean phoneChecker(String cellNo) {
-        return cellNo != null && cellNo.matches(cell); 
+public  static boolean phoneChecker(int cellNo) {
+   
+    return cellNo != null && cellNo.matches(cell); 
 //checks if the number entered has the international country code
     }//OpenAI.(2025).ChatGPT(April 20 version)[Large language model]
 //https://chatgpt.com/c/6803e649-3e6c-8011-a76f-94745bf34121
 
     
 public boolean loginUser(){
-  if (username.equals(username1) && password.equals(password1)) {
+  if (username.equals(username) && password.equals(password)) {
       
   }
   return true;
@@ -84,7 +85,7 @@ public String returnLoginStatus() {
 
 
    
-   
+
 
 
  

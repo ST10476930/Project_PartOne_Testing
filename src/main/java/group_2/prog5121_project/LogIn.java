@@ -35,9 +35,9 @@ public LogIn(String user, String password, int cell){
         && (!password.matches(".*[@#$%^&+=!].*"))  
          && (password.contains(" ")) ;
                  
- }
+ } //OpenAI.(2025).ChatGPT (April 19 version)[Large language model]
      
-public void registerUser()   {
+public String registerUser()   {
     /*
  chatGpt prompt:
 create a regular expression-based cell phone checker that ensures that 
@@ -47,15 +47,15 @@ no more than ten characters long in java
     */
          if (checkUserName() == false) {
       System.out.println("Username is incorrectly formatted");
-        
+
     if (checkPasswordComplexity()== false){
        System.out.println("Password is invalid");
     }
   
     
          }
-         
-
+  String message = "log in details invalid";       
+return message;
 
 }
 public static boolean phoneChecker(String cellNo) {
@@ -65,15 +65,28 @@ public static boolean phoneChecker(String cellNo) {
 //https://chatgpt.com/c/6803e649-3e6c-8011-a76f-94745bf34121
 
     
-
-
-
-
-
-   
-   
-
-
- 
- 
+public boolean loginUser(){
+  if (username.equals(username1) && password.equals(password1)) {
+      
+  }
+  return true;
 }
+
+//method that tells the user the status of their log in,if it was successful or not
+public String returnLoginStatus() {
+   if (loginUser() == true) {
+       System.out.println("Login successful");
+   }else{
+       if (loginUser() == false) {
+           System.out.println("Failed login");
+       }
+   }
+
+
+   
+   
+
+
+ 
+ 
+

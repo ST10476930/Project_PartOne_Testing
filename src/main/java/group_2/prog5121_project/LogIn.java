@@ -38,9 +38,9 @@ public LogIn(String username, String password, String cellPhone){
         && (!password.matches(".*\\d.*"))   
         && (!password.matches(".*[@#$%^&+=!].*"))  
          && (password.contains(" "))) {
-          return true;
-      }else{
           return false;
+      }else{
+          return true;
       }
                  
  } //OpenAI.(2025).ChatGPT (April 19 version)[Large language model]
@@ -77,9 +77,9 @@ public  static boolean phoneChecker(String cellNo) {
 public boolean loginUser(){
     System.out.println(username1 + username);
   if (username1.equals(username) && password1.equals(password)) {
-  return true;    
+  return false;    
   }else { 
- return false;
+ return true;
 }
 }
 

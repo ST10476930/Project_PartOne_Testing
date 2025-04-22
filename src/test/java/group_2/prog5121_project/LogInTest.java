@@ -19,7 +19,7 @@ public class LogInTest {
     }
     @Test
     public void testCheckUserName() {
-        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", +27838978671);
+        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", "+27838978671");
         
          boolean condition = e.checkUserName();
         
@@ -29,7 +29,7 @@ public class LogInTest {
     
     @Test
     public void testCheckPasswordComplexity() {
-        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", +27838978671);
+        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", "+27838978671");
         
          boolean condition = e.checkPasswordComplexity();
         
@@ -38,25 +38,26 @@ public class LogInTest {
 
     @Test
     public void testRegisterUser() {
-        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", +27838978671);
+        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", "+27838978671");
+         String expected = "log in details invalid";
+         
+         String actual = e.registerUser();
         
-         String condition = e.registerUser();
-        
-        Assertions.assertAll(condition);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testPhoneChecker() {
-        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", +27838978671);
+        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", "+27838978671");
         
-         boolean condition = e.phoneChecker(+27838978671);
+         boolean condition = e.phoneChecker("+27838978671");
         
         Assertions.assertTrue(condition);
     }
 
     @Test
     public void testLoginUser() {
-        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", +27838978671);
+        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", "+27838978671");
         
          boolean condition = e.loginUser();
         
@@ -65,11 +66,11 @@ public class LogInTest {
 
     @Test
     public void testReturnLoginStatus() {
-        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", +27838978671);
+        LogIn e = new LogIn("kyl_1", "Ch&&sec@k99!", "+27838978671");
+        String expected = "Log in successful";
+         String actual = e.returnLoginStatus();
         
-         String condition = e.returnLoginStatus();
-        
-        Assertions.assertAll(condition);
+        Assertions.assertEquals(expected, actual);
     }
     
 }
